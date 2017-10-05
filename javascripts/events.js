@@ -1,15 +1,18 @@
 "use strict";
 
+const catxhr = require("./xhr");
+let howManyCats = 0;
+
 $("#catz").keypress((event)=>{
     if (event.key === "Enter" && $("#catz").val() != "") {
-        console.log($("#catz").val());
+        catxhr($("#catz").val());
         $("#catz").val("");
     }    
 });
 
 $("#gimmeCatz").click((event)=>{
     if ($("#catz").val() != "") {
-        console.log($("#catz").val());
+        catxhr($("#catz").val());
         $("#catz").val("");  
     }
 });
