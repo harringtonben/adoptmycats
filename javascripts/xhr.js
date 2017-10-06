@@ -14,8 +14,12 @@ const getCatz = (kitties) => {
 const domString = () => {
     let printString = ``;
     catz.forEach((cat)=> {
-        printString += `<div class="cat-card col-md-6">
-                            <div class="image-container">
+        if (cat.numberOfToes < 10) {
+            printString += `<div class="cat-card col-md-6 disabled-kitty">`;
+        } else {
+            printString += `<div class="cat-card col-md-6">`; 
+        }
+            printString += `<div class="image-container">
                             <img src="${cat.imageUrl}">
                             </div>
                             <div class="description-container">
@@ -24,9 +28,12 @@ const domString = () => {
                             <p> Skills: ${cat.specialSkill} </p>
                             <p class="disabled-cat"> Toes: ${cat.numberOfToes} </p>
                             </div>
-                        </div>`;
+                            </div>`;
     });
     printDom(printString);
+    $("#catz").addClass("hidden");
+    $("#gimmeCatz").addClass("hidden");
+    $("#takeCatz").removeClass("hidden");
 };
 
 const printDom = (strang) => {
