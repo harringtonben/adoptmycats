@@ -17,4 +17,8 @@ $("#gimmeCatz").click((event)=>{
     }
 });
 
+$("#takeCatz").click(() => {
+    $(".disabled-kitty").remove();
+});
+
 module.exports = {};
