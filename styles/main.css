@@ -1,5 +1,5 @@
 body {
-    background-color: tomato;
+    background-image: url("https://i.imgur.com/7xnHhUt.jpg");
 }
 
 .headerText {
@@ -13,3 +13,17 @@ body {
 .hidden {
     display: none;
 }
+
+.cat-card {
+    background-color: #FBFCFF;   
+    width: 300px;
+    height: 400px;
+}
+
+.cat-card img {
+    padding-top: 10px;
+}
+
+
+
+
