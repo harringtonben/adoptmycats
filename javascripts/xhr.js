@@ -15,7 +15,7 @@ const domString = () => {
     let printString = ``;
     catz.forEach((cat)=> {
         if (cat.numberOfToes < 10) {
-            printString += `<div class="cat-card col-md-6 disabled-kitty">`;
+            printString += `<div class="cat-card col-md-4 disabled-kitty">`;
         } else {
             printString += `<div class="cat-card col-md-6">`; 
         }
